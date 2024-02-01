@@ -8,15 +8,13 @@ import {
 } from "react-router-dom";
 import './index.css'
 import Home from './pages/Home'
-import Book from './pages/Book'
 import ErrorPage from './pages/Error';
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/">
-      <Route index element={<Home/>} errorElement={<ErrorPage />}/>
-      <Route path=':id' element={<Book />} errorElement={<ErrorPage />} />
+    <Route path="/" errorElement={<ErrorPage />}>
+      <Route index element={<Home/>}/>
     </Route>
   )
 );

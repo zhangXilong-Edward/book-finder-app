@@ -59,7 +59,7 @@ export default function Body({ results, searchParam, numOfResults, setNumOfResul
 
                         </div>)
                 }) : <div className='book'><i>Loading...</i></div> : (<div className='book'><i>Enter some keywords to starting Searching...</i></div>)}
-                {numOfResults == 10 || numOfResults == 20 ? <div className='show-more-results'><span onClick={handleShowMoreResults}>Show more results</span></div> : <span></span>}
+                {searchParam && numOfResults == 10 || numOfResults == 20 ? <div className='show-more-results'><span onClick={handleShowMoreResults}>Show more results</span></div> : <span></span>}
             </div>
         </div>
     )
